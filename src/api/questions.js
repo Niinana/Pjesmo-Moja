@@ -36,6 +36,25 @@ const questions = {
       odgovor: "d"
     }
   ]
+  ,
+  bih:[
+    {
+      pitanje: "???????",
+      a: "da",
+      b: "ne",
+      c: "ne",
+      d: "?",
+      odgovor: "a"
+    },
+    {
+      pitanje: "pitanje 2 bih",
+      a: "ne",
+      b: "ne",
+      c: "ne",
+      d: "da",
+      odgovor: "d"
+    }
+  ]
 }
 
 export default questions;

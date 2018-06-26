@@ -13,12 +13,35 @@ class Game extends React.Component{
     this.setState({category});
   }
 
+  handleAnswer = (isCorrect) => {
+      let score = this.state.score;
+    if(isCorrect){
+       score = this.state.score + 10;
+    }
+    else{
+       score = this.state.score - 5;
+    }
+    this.setState({score});
+  }
+
+  newGame = () => {
+    this.setState({
+      category: '',
+      score: 0
+    })
+  }
+
   render(){
     if (this.state.category === ''){
       return <CategoryPicker setCategory={this.setCategory}/>
     }
     else{
-      return <QuestionWrapper category={this.state.category}/>
+      return (
+        <div>
+          <p> Score: {this.state.score} </p>
+          <QuestionWrapper category={this.state.category} handleAnswer={this.handleAnswer}  newGame={this.newGame}/>
+        </div>
+      )
     }
   }
 }

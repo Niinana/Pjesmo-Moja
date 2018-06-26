@@ -6,10 +6,10 @@ class Question extends React.Component{
     return (
       <div>
         <p>{this.props.q.pitanje}</p>
-        <button onClick={() => this.props.handleAnswer('a')}> {this.props.q.a} </button>
-        <button onClick={() => this.props.handleAnswer('b')}> {this.props.q.b} </button>
-        <button onClick={() => this.props.handleAnswer('c')}> {this.props.q.c} </button>
-        <button onClick={() => this.props.handleAnswer('d')}> {this.props.q.d} </button>
+        <button className={this.props.classes.a} onClick={() => this.props.checkAnswer('a')}> {this.props.q.a} </button>
+        <button className={this.props.classes.b} onClick={() => this.props.checkAnswer('b')}> {this.props.q.b} </button>
+        <button className={this.props.classes.c} onClick={() => this.props.checkAnswer('c')}> {this.props.q.c} </button>
+        <button className={this.props.classes.d} onClick={() => this.props.checkAnswer('d')}> {this.props.q.d} </button>
       </div>
     );
   }
