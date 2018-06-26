@@ -5,19 +5,34 @@ import categories from '../api/categories';
 
 class QuestionWrapper extends React.Component{
 
-  categoryQuestions = categories[this.props.category].questions;
 
-  state = {
-    current: 1,
-    total: this.categoryQuestions.length,
-    done: false,
-    classes: {
-      a: '',
-      b: '',
-      c: '',
-      d: ''
+
+  constructor(props){
+    super(props);
+
+    this.categoryQuestions = [];
+    if(this.props.category === 'all')
+    {
+       Object.keys(categories).map(key => this.categoryQuestions=[...this.categoryQuestions, ...categories[key].questions]);
     }
+    else{
+      this.categoryQuestions=categories[this.props.category].questions;
+    }
+
+    this.state = {
+      current: 1,
+      total: this.categoryQuestions.length,
+      done: false,
+      classes: {
+        a: '',
+        b: '',
+        c: '',
+        d: ''
+      }
+    }
+
   }
+
 
   next = () => {
     this.setState({
