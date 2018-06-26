@@ -1,11 +1,11 @@
 import React from 'react';
 import Question from './Question';
 import Finished from './Finished';
-import questions from '../api/questions';
+import categories from '../api/categories';
 
 class QuestionWrapper extends React.Component{
 
-  categoryQuestions = questions[this.props.category];
+  categoryQuestions = categories[this.props.category].questions;
 
   state = {
     current: 1,
@@ -39,15 +39,17 @@ class QuestionWrapper extends React.Component{
 
   checkAnswer = (answered) => {
     const correct = this.categoryQuestions[this.state.current - 1].odgovor;
-    this.state.classes[correct] = 'correct';
+    let updatedClasses = {...this.state.classes};
+    updatedClasses[correct] = 'correct';
+    this.setState({classes: updatedClasses});
     if(correct === answered){
       this.props.handleAnswer(true);
     }
     else{
-      this.state.classes[answered] = 'wrong';
+      updatedClasses[answered] = 'wrong';
       this.props.handleAnswer(false);
     }
-    setTimeout(this.next, 700);
+    setTimeout(this.next, 500);
   }
 
   render(){

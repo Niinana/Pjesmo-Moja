@@ -1,3 +1,43 @@
+h2{
+  text-align: center;
+  font-size: 1.8em;
+}
+.categories{
+  margin:auto 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  allign-items: center;
+}
+.categories button{
+  font-size:1.2em;
+  text-transform: capitalize;
+}
+
+.categories button.style1{
+  background-color: blue;
+}
+
+.categories button.style2{
+  background-color: yellow;
+}
+
+.categories button.style3{
+  background-color: pink;
+}
+
+.categories button.style4{
+  background-color: orange;
+}
+
+
+button{
+  outline: none;
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  min-width: 200px;
+}
+
 .correct{
   background-color: green;
 }
