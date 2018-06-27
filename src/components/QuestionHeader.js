@@ -12,6 +12,7 @@ class QuestionHeader extends React.Component{
       <div style={this.getStyle(this.props.color)}>
        <p>{this.props.current}/{this.props.total}</p>
        <p> Score: {this.props.score} </p>
+       <p> highscore: {this.props.highscore} </p>
        <h2>{formatCategory(this.props.category)}</h2>
        <button onClick={this.props.newGame}>Quit</button>
       </div>
