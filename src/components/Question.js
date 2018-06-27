@@ -35,12 +35,14 @@ class Question extends React.Component{
         updatedClasses[answered] = 'wrong';
       }
       this.setState({...updatedClasses});
-      setTimeout(this.nextQuestion, 500);
+      setTimeout(this.nextQuestion, 400);
     }
+
+    //getStyle = ()
 
   render(){
     return (
-      <div>
+      <div className='test'>
        <p> {this.props.question.pitanje}</p>
         <button className={this.state.a} onClick={() => this.checkAnswer('a')}> {this.props.question.a} </button>
         <button className={this.state.b} onClick={() => this.checkAnswer('b')}> {this.props.question.b} </button>

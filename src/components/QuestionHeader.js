@@ -1,4 +1,5 @@
 import React from 'react';
+import {formatCategory} from '../helpers.js';
 
 class QuestionHeader extends React.Component{
 
@@ -11,7 +12,7 @@ class QuestionHeader extends React.Component{
       <div style={this.getStyle(this.props.color)}>
        <p>{this.props.current}/{this.props.total}</p>
        <p> Score: {this.props.score} </p>
-       <h2>{this.props.category}</h2>
+       <h2>{formatCategory(this.props.category)}</h2>
        <button onClick={this.props.newGame}>Quit</button>
       </div>
     );

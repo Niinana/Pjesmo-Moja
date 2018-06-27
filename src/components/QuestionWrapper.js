@@ -67,7 +67,7 @@ class QuestionWrapper extends React.Component{
       return (
         <div>
           <QuestionHeader newGame={this.newGame} current={this.state.current} total={this.state.total} color={this.color} score={this.state.score} category={this.props.category}/>
-          <Question question={this.categoryQuestions[this.state.current - 1]} handleAnswer={this.handleAnswer} next={this.next}/>
+          <Question question={this.categoryQuestions[this.state.current - 1]} handleAnswer={this.handleAnswer} next={this.next} color={this.color}/>
         </div>
       );
     }

@@ -40,7 +40,7 @@ const categories = {
       odgovor: "b"
     }
   ]},
-  exYu:{
+  exYu_bendovi:{
     color: '#ff8a22',
     questions:[
       {
