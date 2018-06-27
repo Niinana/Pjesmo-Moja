@@ -5,30 +5,11 @@ import QuestionWrapper from './QuestionWrapper.js';
 
 class Game extends React.Component{
   state ={
-    category: '',
-    score: 0
+    category: ''
   };
 
   setCategory = (category) => {
     this.setState({category});
-  }
-
-  handleAnswer = (isCorrect) => {
-      let score = this.state.score;
-    if(isCorrect){
-       score = this.state.score + 10;
-    }
-    else{
-       score = this.state.score - 5;
-    }
-    this.setState({score});
-  }
-
-  newGame = () => {
-    this.setState({
-      category: '',
-      score: 0
-    })
   }
 
   render(){
@@ -38,8 +19,7 @@ class Game extends React.Component{
     else{
       return (
         <div>
-          <p> Score: {this.state.score} </p>
-          <QuestionWrapper category={this.state.category} handleAnswer={this.handleAnswer}  newGame={this.newGame}/>
+          <QuestionWrapper category={this.state.category} handleAnswer={this.handleAnswer}  newGame={this.newGame} setCategory={this.setCategory}/>
         </div>
       )
     }

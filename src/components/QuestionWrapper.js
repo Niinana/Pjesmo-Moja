@@ -1,13 +1,13 @@
 import React from 'react';
+import QuestionHeader from './QuestionHeader'
 import Question from './Question';
 import Finished from './Finished';
 import categories from '../api/categories';
 
 class QuestionWrapper extends React.Component{
 
-
-
   constructor(props){
+
     super(props);
 
     this.categoryQuestions = [];
@@ -23,26 +23,15 @@ class QuestionWrapper extends React.Component{
       current: 1,
       total: this.categoryQuestions.length,
       done: false,
-      classes: {
-        a: '',
-        b: '',
-        c: '',
-        d: ''
-      }
+      score: 0,
     }
+
+    this.color=categories[this.props.category].color;
 
   }
 
 
   next = () => {
-    this.setState({
-      classes: {
-          a: '',
-          b: '',
-          c: '',
-          d: ''
-        }
-    })
     if(this.state.current === this.state.total){
       this.setState({done: true});
     }
@@ -52,33 +41,38 @@ class QuestionWrapper extends React.Component{
     }
   }
 
-  checkAnswer = (answered) => {
-    const correct = this.categoryQuestions[this.state.current - 1].odgovor;
-    let updatedClasses = {...this.state.classes};
-    updatedClasses[correct] = 'correct';
-    this.setState({classes: updatedClasses});
-    if(correct === answered){
-      this.props.handleAnswer(true);
+  handleAnswer = (isCorrect) => {
+    console.log(this);
+    let score = this.state.score;
+    if(isCorrect){
+      score = score + 10;
     }
     else{
-      updatedClasses[answered] = 'wrong';
-      this.props.handleAnswer(false);
+      score = score - 5;
     }
-    setTimeout(this.next, 500);
+    this.setState({score});
   }
+
+  newGame = () => {
+    this.setState({
+      score: 0
+    });
+    this.props.setCategory('');
+  }
+
 
   render(){
     if(!this.state.done)
     {
       return (
         <div>
-          {this.state.current}/{this.state.total}
-          <Question q={this.categoryQuestions[this.state.current - 1]} checkAnswer={this.checkAnswer} classes={this.state.classes}/>
+          <QuestionHeader newGame={this.newGame} current={this.state.current} total={this.state.total} color={this.color} score={this.state.score} category={this.props.category}/>
+          <Question question={this.categoryQuestions[this.state.current - 1]} handleAnswer={this.handleAnswer} next={this.next}/>
         </div>
       );
     }
     else {
-      return <Finished newGame={this.props.newGame}/>;
+      return <Finished newGame={this.newGame} score={this.state.score}/>;
     }
   }
 }

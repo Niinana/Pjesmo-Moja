@@ -52,7 +52,49 @@ const categories = {
         odgovor: "a"
       },
       {
-        pitanje: "pitanje 2 bih",
+        pitanje: "pitanje 2 exyu",
+        a: "ne",
+        b: "ne",
+        c: "ne",
+        d: "da",
+        odgovor: "d"
+      }
+    ]
+  },
+  balade:{
+    color: '#d2ff59',
+    questions:[
+      {
+        pitanje: "???????",
+        a: "da",
+        b: "ne",
+        c: "ne",
+        d: "?",
+        odgovor: "a"
+      },
+      {
+        pitanje: "pitanje 2 exyu",
+        a: "ne",
+        b: "ne",
+        c: "ne",
+        d: "da",
+        odgovor: "d"
+      }
+    ]
+  },
+  sarajevski_bendovi:{
+    color: '#ff5998',
+    questions:[
+      {
+        pitanje: "???????",
+        a: "da",
+        b: "ne",
+        c: "ne",
+        d: "?",
+        odgovor: "a"
+      },
+      {
+        pitanje: "pitanje 2 exyu",
         a: "ne",
         b: "ne",
         c: "ne",
@@ -66,4 +108,9 @@ const categories = {
     questions:[]
   }
 }
+
+// rap: helem nejse, elemental, edo majka, frenkie, kontra
+// sarajevki_bendovi: dubioza, stuke, helem nejse, pušenje, štampa
+// balade: oliver, gibonni, balašević, toše, čola
+
 export default categories;

@@ -11,23 +11,13 @@ h2{
 .categories button{
   font-size:1.2em;
   text-transform: capitalize;
+  cursor: pointer;
+}
+.categories button:hover{
+  opacity: 0.7
 }
 
-.categories button.style1{
-  background-color: blue;
-}
 
-.categories button.style2{
-  background-color: yellow;
-}
-
-.categories button.style3{
-  background-color: pink;
-}
-
-.categories button.style4{
-  background-color: orange;
-}
 
 
 button{
