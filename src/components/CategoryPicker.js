@@ -2,6 +2,7 @@ import React from 'react';
 import categories from '../api/categories';
 import {formatCategory} from '../helpers.js';
 
+
 class CategoryPicker extends React.Component{
 
   getStyle = (key) => {
@@ -10,7 +11,6 @@ class CategoryPicker extends React.Component{
   }
 
   render(){
-    console.log(formatCategory('a_b'));
     return (
       <React.Fragment>
         <h2> Choose a category:</h2>

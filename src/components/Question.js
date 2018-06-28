@@ -26,7 +26,6 @@ class Question extends React.Component{
 
       let updatedClasses = {...this.state};
       updatedClasses[correct] = 'correct';
-      let score = this.state.score;
       if(correct === answered){
        this.props.handleAnswer(true);
       }
@@ -38,11 +37,10 @@ class Question extends React.Component{
       setTimeout(this.nextQuestion, 400);
     }
 
-    //getStyle = ()
 
   render(){
     return (
-      <div className='test'>
+      <div>
        <p> {this.props.question.pitanje}</p>
         <button className={this.state.a} onClick={() => this.checkAnswer('a')}> {this.props.question.a} </button>
         <button className={this.state.b} onClick={() => this.checkAnswer('b')}> {this.props.question.b} </button>
