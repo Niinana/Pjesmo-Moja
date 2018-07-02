@@ -69,7 +69,7 @@ const categories = {
     ]
   },
   sarajevski_bendovi:{
-    color: '#ff4f4f',
+    color: '#f95e5e',
     questions:[
       {
         pitanje: "5",
@@ -151,7 +151,7 @@ const categories = {
     ]
   },
   random_20:{
-    color: '#3772FF',
+    color: '#5e8dff',
     questions:[]
   }
 }

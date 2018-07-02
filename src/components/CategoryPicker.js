@@ -7,7 +7,7 @@ import {formatCategory} from '../helpers.js';
 class CategoryPicker extends React.Component{
 
   static propTypes = {
-    setCategory: PropTypes.func
+    setCategory: PropTypes.func.isRequired
   }
 
   getStyle = (key) => {

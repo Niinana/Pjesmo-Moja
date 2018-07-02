@@ -34,8 +34,8 @@ class QuestionWrapper extends React.Component{
   }
 
   static propTypes = {
-    category: PropTypes.string,
-    setCategory: PropTypes.func
+    category: PropTypes.string.isRequired,
+    setCategory: PropTypes.func.isRequired
   }
 
   next = () => {
@@ -73,7 +73,7 @@ class QuestionWrapper extends React.Component{
     {
       return (
         <div>
-          <QuestionHeader newGame={this.newGame} current={this.state.current} total={this.state.total} color={this.color} score={this.state.score} highscore={this.state.highscore} category={this.props.category}/>
+          <QuestionHeader newGame={this.newGame} current={this.state.current} total={this.state.total} color={this.color} score={this.state.score} highscore={Number(this.state.highscore)} category={this.props.category}/>
           <Question current={this.state.current} question={this.categoryQuestions[this.state.current - 1]} handleAnswer={this.handleAnswer} next={this.next} color={this.color}/>
         </div>
       );

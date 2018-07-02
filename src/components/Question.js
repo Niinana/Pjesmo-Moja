@@ -19,17 +19,17 @@ class Question extends React.Component{
 
   static propTypes = {
     question: PropTypes.shape({
-      a: PropTypes.string,
-      b: PropTypes.string,
-      c: PropTypes.string,
-      d: PropTypes.string,
-      odgovor: PropTypes.string,
-      pitanje: PropTypes.string
+      a: PropTypes.string.isRequired,
+      b: PropTypes.string.isRequired,
+      c: PropTypes.string.isRequired,
+      d: PropTypes.string.isRequired,
+      odgovor: PropTypes.string.isRequired,
+      pitanje: PropTypes.string.isRequired
     }),
-    current: PropTypes.number,
-    color: PropTypes.string,
-    handleAnswer: PropTypes.func,
-    next:PropTypes.func
+    current: PropTypes.number.isRequired,
+    color: PropTypes.string.isRequired,
+    handleAnswer: PropTypes.func.isRequired,
+    next:PropTypes.func.isRequired
   }
 
 
@@ -60,7 +60,7 @@ class Question extends React.Component{
       <TransitionGroup component="div" className="question">
         <CSSTransition classNames="question" key={this.props.current} timeout={{enter: 800, exit:800}}>
       <div>
-       <p> {this.props.question.pitanje}</p>
+       <h3> {this.props.question.pitanje}</h3>
               <button className={this.state.a} onClick={() => this.checkAnswer('a')}> {this.props.question.a} </button>
               <button className={this.state.b} onClick={() => this.checkAnswer('b')}> {this.props.question.b} </button>
               <button className={this.state.c} onClick={() => this.checkAnswer('c')}> {this.props.question.c} </button>

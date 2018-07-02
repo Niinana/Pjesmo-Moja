@@ -1,3 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Marcellus");
+@import url("https://fonts.googleapis.com/css?family=Radley");
+h1, h2, h4 {
+  font-family: "Marcellus", serif;
+  text-align: center; }
+
+h2 {
+  font-size: 2.2em; }
+
+h3 {
+  font-size: 1.7em;
+  font-family: "Radley", serif; }
+
+p, button {
+  font-size: 1.2em;
+  font-family: "Radley", serif; }
+
+button {
+  outline: none;
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  min-width: 200px; }
+
 .categories {
   margin: auto 20%;
   display: grid;
@@ -7,8 +31,7 @@
 .categories button {
   font-size: 1.2em;
   text-transform: capitalize;
-  cursor: pointer;
-  min-width: 200px; }
+  cursor: pointer; }
 
 .categories button:hover {
   opacity: 0.7; }
@@ -24,7 +47,12 @@
 .question-header .quit {
   grid-area: quit;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.15); }
+  min-width: 50px;
+  background-color: rgba(0, 0, 0, 0.15);
+  cursor: pointer; }
+
+.question-header .quit:hover {
+  background-color: rgba(0, 0, 0, 0.2); }
 
 .question-header .category {
   grid-area: category; }
@@ -48,6 +76,16 @@
   text-align: center;
   margin-top: 80px; }
 
+.question button {
+  display: block;
+  margin: 10px auto;
+  padding: 15px;
+  min-width: 350px;
+  cursor: pointer; }
+
+.question button:hover {
+  background-color: #cecece; }
+
 .question-enter {
   transform: translateX(120%) scale(0.2);
   transition: all .8s; }
@@ -66,17 +104,14 @@
   transform: translateX(-120%) scale(0.2); }
 
 .correct {
-  background-color: blue; }
+  background-color: green; }
 
 .wrong {
   background-color: red; }
 
-h2 {
-  text-align: center;
-  font-size: 1.8em; }
+.finished {
+  text-align: center; }
 
-button {
-  outline: none;
-  border: none;
-  margin: 10px;
-  padding: 10px; }
+.finished h3, .finished p {
+  transform: scale(2);
+  margin: 50px; }

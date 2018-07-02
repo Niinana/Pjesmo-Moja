@@ -16,14 +16,14 @@ newHighscore = false;
     }
 
     static propTypes = {
-      category: PropTypes.string,
-      score: PropTypes.number,
-      newGame: PropTypes.func
+      category: PropTypes.string.isRequired,
+      score: PropTypes.number.isRequired,
+      newGame: PropTypes.func.isRequired
     }
 
   render(){
     return (
-      <div>
+      <div className="finished">
         <h3> {this.props.score} </h3>
         <p> {(this.newHighscore) ? `Congratulations, new highscore!` : `Your highscore is ${this.previousHighscore } points. Better luck next time!`}</p>
         <button onClick={() => this.props.newGame()}> New Game</button>

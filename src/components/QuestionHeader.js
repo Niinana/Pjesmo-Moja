@@ -9,13 +9,13 @@ class QuestionHeader extends React.Component{
   }
 
   static propTypes = {
-    category: PropTypes.string,
-    color: PropTypes.string,
-    highscore: PropTypes.string,
-    current: PropTypes.number,
-    score: PropTypes.number,
-    total: PropTypes.number,
-    newGame: PropTypes.func
+    category: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired,
+    highscore: PropTypes.number.isRequired,
+    current: PropTypes.number.isRequired,
+    score: PropTypes.number.isRequired,
+    total: PropTypes.number.isRequired,
+    newGame: PropTypes.func.isRequired
   }
 
   render(){
