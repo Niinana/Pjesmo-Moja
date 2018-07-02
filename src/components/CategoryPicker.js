@@ -1,9 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import categories from '../api/categories';
 import {formatCategory} from '../helpers.js';
 
 
 class CategoryPicker extends React.Component{
+
+  static propTypes = {
+    setCategory: PropTypes.func
+  }
 
   getStyle = (key) => {
     const color = categories[key].color;

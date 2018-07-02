@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import QuestionHeader from './QuestionHeader'
 import Question from './Question';
 import Finished from './Finished';
@@ -32,7 +33,10 @@ class QuestionWrapper extends React.Component{
 
   }
 
-
+  static propTypes = {
+    category: PropTypes.string,
+    setCategory: PropTypes.func
+  }
 
   next = () => {
     if(this.state.current === this.state.total){
@@ -45,7 +49,6 @@ class QuestionWrapper extends React.Component{
   }
 
   handleAnswer = (isCorrect) => {
-    console.log(this);
     let score = this.state.score;
     if(isCorrect){
       score = score + 10;
@@ -71,7 +74,7 @@ class QuestionWrapper extends React.Component{
       return (
         <div>
           <QuestionHeader newGame={this.newGame} current={this.state.current} total={this.state.total} color={this.color} score={this.state.score} highscore={this.state.highscore} category={this.props.category}/>
-          <Question question={this.categoryQuestions[this.state.current - 1]} handleAnswer={this.handleAnswer} next={this.next} color={this.color}/>
+          <Question current={this.state.current} question={this.categoryQuestions[this.state.current - 1]} handleAnswer={this.handleAnswer} next={this.next} color={this.color}/>
         </div>
       );
     }

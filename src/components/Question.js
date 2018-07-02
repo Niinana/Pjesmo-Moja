@@ -1,4 +1,6 @@
 import React from 'react';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import PropTypes from 'prop-types';
 
 class Question extends React.Component{
 
@@ -13,6 +15,21 @@ class Question extends React.Component{
       };
 
       this.state={...this.defaultClasses};
+  }
+
+  static propTypes = {
+    question: PropTypes.shape({
+      a: PropTypes.string,
+      b: PropTypes.string,
+      c: PropTypes.string,
+      d: PropTypes.string,
+      odgovor: PropTypes.string,
+      pitanje: PropTypes.string
+    }),
+    current: PropTypes.number,
+    color: PropTypes.string,
+    handleAnswer: PropTypes.func,
+    next:PropTypes.func
   }
 
 
@@ -40,13 +57,18 @@ class Question extends React.Component{
 
   render(){
     return (
+      <TransitionGroup component="div" className="question">
+        <CSSTransition classNames="question" key={this.props.current} timeout={{enter: 800, exit:800}}>
       <div>
        <p> {this.props.question.pitanje}</p>
-        <button className={this.state.a} onClick={() => this.checkAnswer('a')}> {this.props.question.a} </button>
-        <button className={this.state.b} onClick={() => this.checkAnswer('b')}> {this.props.question.b} </button>
-        <button className={this.state.c} onClick={() => this.checkAnswer('c')}> {this.props.question.c} </button>
-        <button className={this.state.d} onClick={() => this.checkAnswer('d')}> {this.props.question.d} </button>
-      </div>
+              <button className={this.state.a} onClick={() => this.checkAnswer('a')}> {this.props.question.a} </button>
+              <button className={this.state.b} onClick={() => this.checkAnswer('b')}> {this.props.question.b} </button>
+              <button className={this.state.c} onClick={() => this.checkAnswer('c')}> {this.props.question.c} </button>
+              <button className={this.state.d} onClick={() => this.checkAnswer('d')}> {this.props.question.d} </button>
+            </div>
+          </CSSTransition>
+        </TransitionGroup>
+
     );
   }
 }

@@ -1,3 +1,31 @@
+.question{
+  text-align: center;
+  margin-top: 80px;
+}
+
+.question-enter{
+  transform: translateX(120%) scale(0.2);
+  transition: all .8s;
+}
+
+.question-enter-active{
+  transform: translateX(0) scale(1);
+}
+
+.question-exit{
+  transition: all .8s;
+  transform: translateX(0);
+  position: absolute;
+  width: 100%;
+  top:180px;
+}
+
+.question-exit-active{
+  transform: translateX(-120%) scale(0.2);
+}
+
+
+
 h2{
   text-align: center;
   font-size: 1.8em;
@@ -27,6 +55,7 @@ button{
 }
 
 .question-header{
+  height: 75px;
   padding: 15px;
   display: grid;
   grid-gap: 10px;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Finished extends React.Component{
 
@@ -12,6 +13,12 @@ newHighscore = false;
       }
       localStorage.setItem(this.props.category, this.props.score);
       this.newHighscore = true;
+    }
+
+    static propTypes = {
+      category: PropTypes.string,
+      score: PropTypes.number,
+      newGame: PropTypes.func
     }
 
   render(){
