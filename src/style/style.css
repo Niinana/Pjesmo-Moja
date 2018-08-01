@@ -104,10 +104,10 @@ button {
   transform: translateX(-120%) scale(0.2); }
 
 .correct {
-  background-color: green; }
+  background-color: green !important; }
 
 .wrong {
-  background-color: red; }
+  background-color: red !important; }
 
 .finished {
   text-align: center; }

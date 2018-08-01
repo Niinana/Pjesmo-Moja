@@ -4,6 +4,8 @@
 $headerFont: 'Marcellus', serif;
 $mainFont: 'Radley', serif;
 
+
+
 h1, h2, h4 {
   font-family: $headerFont;
   text-align: center;
@@ -130,11 +132,11 @@ button{
 }
 
 .correct{
-  background-color: green;
+  background-color: green !important;
 }
 
 .wrong{
-  background-color: red;
+  background-color: red !important;
 }
 
 .finished{

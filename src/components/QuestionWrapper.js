@@ -15,7 +15,7 @@ class QuestionWrapper extends React.Component{
     if(this.props.category === 'random_20')
     {
        Object.keys(categories).map(key => this.categoryQuestions=[...this.categoryQuestions, ...categories[key].questions]);
-       this.categoryQuestions = getRandom(this.categoryQuestions, 10);
+       this.categoryQuestions = getRandom(this.categoryQuestions, 20);
     }
     else{
       this.categoryQuestions=categories[this.props.category].questions;
