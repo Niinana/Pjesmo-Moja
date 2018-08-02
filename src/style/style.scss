@@ -6,6 +6,13 @@ $mainFont: 'Radley', serif;
 
 
 
+body{
+  background: url('../images/background.jpg');
+  background-size: cover;
+  background-position: top; 
+  background-repeat: no-repeat;
+}
+
 h1, h2, h4 {
   font-family: $headerFont;
   text-align: center;
@@ -31,22 +38,28 @@ button{
   margin: 10px;
   padding: 10px;
   min-width: 200px;
+  cursor: pointer;
 }
 
+.picker{
+  margin-top: 10%;
+  h2{
+    font-size: 3em;
+  }
+}
 
 .categories{
   margin:auto 20%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   allign-items: center;
 }
 .categories button{
-  font-size:1.2em;
+  font-size:1.5em;
   text-transform: capitalize;
-  cursor: pointer;
 
 }
-.categories button:hover{
+button:hover{
   opacity: 0.7
 }
 

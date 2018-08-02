@@ -17,7 +17,7 @@ class CategoryPicker extends React.Component{
 
   render(){
     return (
-      <React.Fragment>
+      <div className="picker">
         <h2> Choose a category:</h2>
         <div className="categories">
           {
@@ -26,7 +26,7 @@ class CategoryPicker extends React.Component{
             )
           }
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }
