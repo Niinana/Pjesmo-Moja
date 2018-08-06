@@ -48,7 +48,7 @@ const categories = {
     }
   ]},
   exYu_bendovi:{
-    color: '#ff8a22',
+    color: '#5e8dff',
     questions:[
       {
         pitanje: "3",
@@ -151,7 +151,7 @@ const categories = {
     ]
   },
   random_20:{
-    color: '#5e8dff',
+    color: '#ff8a22',
     questions:[]
   }
 }

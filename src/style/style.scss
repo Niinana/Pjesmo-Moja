@@ -40,6 +40,10 @@ button{
   min-width: 200px;
   cursor: pointer;
 }
+button:hover{
+  opacity: 0.7
+}
+
 
 .picker{
   margin-top: 10%;
@@ -53,14 +57,10 @@ button{
   display: grid;
   grid-template-columns: 1fr 1fr;
   allign-items: center;
-}
-.categories button{
-  font-size:1.5em;
-  text-transform: capitalize;
-
-}
-button:hover{
-  opacity: 0.7
+  button{
+    font-size:1.5em;
+    text-transform: capitalize;
+  }
 }
 
 
@@ -117,6 +117,8 @@ button:hover{
   padding: 15px;
   min-width: 350px;
   cursor: pointer;
+  box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.4);
+  background-color: #fff;
 }
 
 .question button:hover{
