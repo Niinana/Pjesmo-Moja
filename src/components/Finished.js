@@ -24,7 +24,7 @@ newHighscore = false;
   render(){
     return (
       <div className="finished">
-        <h3> {this.props.score} </h3>
+        <h3> Scored: {this.props.score} </h3>
         <p> {(this.newHighscore) ? `Congratulations, new highscore!` : `Your highscore is ${this.previousHighscore } points. Better luck next time!`}</p>
         <button onClick={() => this.props.newGame()}> New Game</button>
       </div>

@@ -12,17 +12,20 @@ class Game extends React.Component{
     this.setState({category});
   }
 
+
   render(){
-    if (this.state.category === ''){
-      return <CategoryPicker setCategory={this.setCategory}/>
-    }
-    else{
-      return (
-        <div>
-          <QuestionWrapper category={this.state.category} handleAnswer={this.handleAnswer}  newGame={this.newGame} setCategory={this.setCategory}/>
-        </div>
-      )
-    }
+
+    return (
+    <div className="game">
+      <CategoryPicker setCategory={this.setCategory} chosen={this.state.category}/>
+      {(this.state.category !== '')?
+          <div>
+            <QuestionWrapper category={this.state.category} handleAnswer={this.handleAnswer}  newGame={this.newGame} setCategory={this.setCategory}/>
+          </div>
+        :
+        <React.Fragment/>
+      }
+    </div>)
   }
 }
 

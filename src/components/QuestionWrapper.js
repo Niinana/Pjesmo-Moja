@@ -6,6 +6,7 @@ import Finished from './Finished';
 import categories from '../api/categories';
 import {getRandom} from '../helpers.js';
 
+
 class QuestionWrapper extends React.Component{
 
   constructor(props){

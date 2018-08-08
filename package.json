@@ -20,7 +20,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "watch": "concurrently \"npm run start\" \"npm run scss\" \"npm run prefix\"  ",
+    "watch": "concurrently \"npm run start\" \"npm run scss\"  ",
+    "prebuild": "npm run prefix", 
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "scss": "node-sass --watch src/style -o src/style",

@@ -1,12 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=Marcellus");
 @import url("https://fonts.googleapis.com/css?family=Radley");
+.question button, .finished button {
+  background-color: #000;
+  color: #fff; }
+
+.question button:hover, .finished button:hover {
+  background-color: #fff;
+  color: #000;
+  border: solid 2px #000; }
+
+.correct, .wrong {
+  color: #fff !important;
+  border: none !important; }
+
+/* GENERAL */
 body {
-  background: url("../images/background.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat; }
 
-h1, h2, h4 {
+h1, h2, h3, h4 {
   font-family: "Marcellus", serif;
   text-align: center; }
 
@@ -14,11 +27,10 @@ h2 {
   font-size: 2.2em; }
 
 h3 {
-  font-size: 1.7em;
-  font-family: "Radley", serif; }
+  font-size: 1.7em; }
 
 p, button {
-  font-size: 1.2em;
+  font-size: 1.35em;
   font-family: "Radley", serif; }
 
 button {
@@ -28,9 +40,6 @@ button {
   padding: 10px;
   min-width: 200px;
   cursor: pointer; }
-
-button:hover {
-  opacity: 0.7; }
 
 .picker {
   margin-top: 10%; }
@@ -46,15 +55,59 @@ button:hover {
 
 .categories button {
   font-size: 1.5em;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  transition: all .4s; }
+
+.categories button:not(.active):hover {
+  transform: scale(1.05); }
+
+.categories button.active {
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: height 2.2s ease;
+  animation-fill-mode: forwards;
+  font-family: "Marcellus", serif;
+  font-weight: bold; }
+
+@keyframes height {
+  0% {
+    height: 100%;
+    font-size: 0em; }
+  40% {
+    height: 100%;
+    font-size: 4em; }
+  60% {
+    height: 100%;
+    font-size: 4em; }
+  100% {
+    height: 130px;
+    font-size: 2.5em; } }
+
+.hide {
+  display: none; }
+
+.question-wrapper button:hover {
+  opacity: 0.7; }
 
 .question-header {
-  height: 75px;
-  padding: 15px;
+  position: fixed;
+  margin: 0 4%;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100px;
+  padding: 15px 1%;
   display: grid;
   grid-gap: 10px;
+  font-weight: bold;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-areas: "current   category    quit" "score   highscore   quit"; }
+  grid-template-areas: "current   category    quit" "score   highscore   quit";
+  animation: show 2.75s ease;
+  animation-fill-mode: forwards; }
 
 .question-header .quit {
   grid-area: quit;
@@ -70,8 +123,13 @@ button:hover {
   grid-area: category; }
 
 .question-header .highscore {
-  grid-area: highscore;
-  text-align: center; }
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  font-size: 2em;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2%; }
 
 .question-header .current {
   grid-area: current;
@@ -84,31 +142,34 @@ button:hover {
   margin: 0;
   text-transform: capitalize; }
 
+@keyframes show {
+  0% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 100%; } }
+
 .question {
   text-align: center;
-  margin-top: 80px; }
+  margin-top: 100px; }
 
 .question button {
   display: block;
   margin: 10px auto;
   padding: 15px;
   min-width: 350px;
-  cursor: pointer;
-  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
-  background-color: #fff; }
-
-.question button:hover {
-  background-color: #cecece; }
+  cursor: pointer; }
 
 .question-enter {
   transform: translateX(120%) scale(0.2);
-  transition: all .8s; }
+  transition: all 1s; }
 
 .question-enter-active {
   transform: translateX(0) scale(1); }
 
 .question-exit {
-  transition: all .8s;
+  transition: all 1s;
   transform: translateX(0);
   position: absolute;
   width: 100%;
@@ -124,8 +185,15 @@ button:hover {
   background-color: red !important; }
 
 .finished {
-  text-align: center; }
+  text-align: center;
+  margin-top: 5%; }
 
 .finished h3, .finished p {
-  transform: scale(2);
-  margin: 50px; }
+  transform: scale(1.8);
+  line-height: 60px; }
+
+.finished h3 {
+  text-transform: uppercase; }
+
+.finished button {
+  transform: scale(1.2); }
