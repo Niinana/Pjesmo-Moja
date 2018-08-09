@@ -7,10 +7,11 @@ $mainFont: 'Radley', serif;
 %blackButton{
   background-color: #000;
   color: #fff;
+  border: solid 2px #000;
 }
 
 %reverseButton{
-  background-color: #fff;
+  background-color:transparent;
   color: #000;
   font-weight: bold;
   border: solid 2px #000;
@@ -28,6 +29,12 @@ body{
   background-size: cover;
   background-position: top; 
   background-repeat: no-repeat;
+    -ms-overflow-style: none;  // IE 10+
+    overflow: -moz-scrollbars-none;  // Firefox
+   
+}
+body::-webkit-scrollbar { 
+  display: none;  // Safari and Chrome
 }
 
 h1, h2, h3, h4 {
@@ -59,10 +66,20 @@ button{
 
 
 
-.picker{
-  margin-top: 10%;
-  h2{
-    font-size: 3em;
+
+.game{
+  text-align:center;
+  .logo{
+    margin-top: 80px;
+    width:180px;
+    animation-duration: .2s;
+  }
+  .categories-wrapper{
+  margin-top: 75px;
+    h3{
+      text-transform: uppercase;
+      margin-top: 5%;
+    }
   }
 }
 
@@ -75,10 +92,10 @@ button{
     font-size:1.5em;
     text-transform: capitalize;
     transition: all .4s;
-
+    animation-duration: .8s;
   }
-  button:not(.active):hover{
-    transform: scale(1.05);
+  button.show:hover{
+    opacity: 0.5;
   }
   button.active{
     position: fixed;
@@ -87,7 +104,7 @@ button{
     height:100%;
     top:0;
     left:0;
-    animation: height 2.2s ease;
+    animation: height 1.5s ease;
     animation-fill-mode: forwards;
     font-family: $headerFont;
     font-weight: bold;
@@ -101,11 +118,11 @@ button{
     font-size: 0em;
   }
 
-  40% {
+  35% {
     height:100%;
     font-size: 4em;
   }
-  60% {
+  65% {
     height:100%;
     font-size: 4em;
   }
@@ -175,7 +192,7 @@ button{
     margin: 0;
     text-transform: capitalize;
   }
-  animation: show 2.75s ease;
+  animation: show 2s ease;
   animation-fill-mode: forwards;
 }
 @keyframes show {
@@ -194,7 +211,7 @@ button{
 
 .question{
   text-align: center;
-  margin-top: 100px;
+  margin-top: 200px;
   button{
     display:block;
     margin: 10px auto;
@@ -206,30 +223,39 @@ button{
   button:hover{
     @extend %reverseButton;
   }
+  transition: all 1s;
 }
 
 
 
 .question-enter{
-  transform: translateX(120%) scale(0.2);
-  transition: all 1s;
+  transform: translateX(100%) scale(0.2);
+  opacity: 0;
+  transition: all .8s;
 }
 
 .question-enter-active{
+  opacity:1;
   transform: translateX(0) scale(1);
 }
 
+
 .question-exit{
-  transition: all 1s;
-  transform: translateX(0);
+  transition: all .8s;
+  transform: translateX(0) scale(1.2);
+  opacity:1;
   position: absolute;
+  top: 250px;
   width: 100%;
-  top:180px;
+  
 }
 
 .question-exit-active{
-  transform: translateX(-120%) scale(0.2);
+  transform: translateX(-100%) scale(0.2);
+  opacity: 0;
+
 }
+
 
 .correct{
   background-color: green !important;
@@ -243,7 +269,7 @@ button{
 
 .finished{
   text-align: center;
-  margin-top: 5%;
+  margin-top: 12%;
   h3, p{
     transform: scale(1.8);
     line-height: 60px;

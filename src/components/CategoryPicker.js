@@ -1,19 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Delay from 'react-delay';
 import categories from '../api/categories';
 import {formatCategory} from '../helpers.js';
 
 
 class CategoryPicker extends React.Component{
 
+
   static propTypes = {
     setCategory: PropTypes.func.isRequired,
     chosen: PropTypes.string
   }
 
+ 
+  delay=0;
+
   getStyle = (key) => {
     const color = categories[key].color;
-    return{ backgroundColor: color }
+    this.delay += 250;
+    return{ backgroundColor: color, animationDelay: this.delay }
   }
 
   getClass = (key) => {
@@ -28,15 +34,17 @@ class CategoryPicker extends React.Component{
 
   render(){
     return (
-      <div className="picker">
-        <h2 className={(this.props.chosen!=='')?"hide":"show"}> Choose a category:</h2>
+      <div className="categories-wrapper">
         <div className="categories">
           {
             Object.keys(categories).map(key =>
-              <button className={this.getClass(key)} key={key} style={this.getStyle(key)} onClick={()=>{this.props.setCategory(key)}}> {formatCategory(key)} </button>
+             <Delay  wait={this.delay} key={key}>
+               <button className={`${this.getClass(key)} animated bounceInDown`} key={key} style={this.getStyle(key)} onClick={()=>{this.props.setCategory(key)}}> {formatCategory(key)} </button>
+             </Delay> 
             )
           }
         </div>
+        <Delay wait={this.delay+200}><h3 className={(this.props.chosen!=='')?"hide":"show animated bounceIn"}> Choose a category</h3></Delay> 
       </div>
     );
   }

@@ -58,7 +58,7 @@ class Question extends React.Component{
   render(){
     return (
       <TransitionGroup component="div" className="question">
-        <CSSTransition classNames="question" key={this.props.current} timeout={{enter: 1000, exit:1000}}>
+        <CSSTransition classNames="question" key={this.props.current} timeout={{ enter: 800, exit:800}}>
       <div>
        <h3> {this.props.question.pitanje}</h3>
               <button className={this.state.a} onClick={() => this.checkAnswer('a')}> {this.props.question.a} </button>

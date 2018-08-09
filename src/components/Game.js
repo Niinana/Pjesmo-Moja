@@ -5,18 +5,27 @@ import QuestionWrapper from './QuestionWrapper.js';
 
 class Game extends React.Component{
   state ={
-    category: ''
+    category: '',
   };
 
   setCategory = (category) => {
+
     this.setState({category});
   }
+
+
 
 
   render(){
 
     return (
     <div className="game">
+      {(this.state.category === '')?
+        <img className="logo animated zoomIn" src={require('../images/logo.png')}/>
+        :
+        <React.Fragment/>
+      }
+  
       <CategoryPicker setCategory={this.setCategory} chosen={this.state.category}/>
       {(this.state.category !== '')?
           <div>
@@ -25,6 +34,7 @@ class Game extends React.Component{
         :
         <React.Fragment/>
       }
+      
     </div>)
   }
 }
