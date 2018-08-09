@@ -68,7 +68,7 @@ const categories = {
       a: "Happy Machine (Dubioza Kolektiv)",
       b: "Go u Gostima (Helem Nejse)",
       c: "Brojevi Računa (Letu Štuke)",
-      d: "Savršeni Organizam (Skroz)",
+      d: "Regija (Skroz)",
       odgovor: "b"
     },
     {
@@ -92,12 +92,12 @@ const categories = {
     color: '#5e8dff',
     questions:[
       {
-        pitanje: "3",
-        a: "da",
-        b: "ne",
-        c: "ne",
-        d: "?",
-        odgovor: "a"
+        pitanje: "Digni ruku nemaš kartu ni do...",
+        a: "",
+        b: "Prištine",
+        c: "",
+        d: "",
+        odgovor: "b"
       },
       {
         pitanje: "4",
@@ -113,20 +113,45 @@ const categories = {
     color: '#f95e5e',
     questions:[
       {
-        pitanje: "5",
-        a: "da",
-        b: "ne",
-        c: "ne",
-        d: "?",
+        pitanje: "U Zenicu kada pođem ja prati me koliko drotova? (Zabranjeno Pušenje)",
+        a: "pet-šes'",
+        b: "šesnes'",
+        c: "še'set",
+        d: "hejbet",
         odgovor: "a"
       },
       {
-        pitanje: "6",
-        a: "ne",
-        b: "ne",
-        c: "ne",
-        d: "da",
+        pitanje: "Ko su protagonisti pjesme Kabadahija? (Helem Nejse)",
+        a: "Ema i Bojan",
+        b: "Ena i Boris",
+        c: "Ela i Bojan",
+        d: "Esma i Boris",
+        odgovor: "b"
+      },
+      {
+        pitanje: "Šta ne zna primitivizam? (Letu Štuke)",
+        a: "Šta je to nadrealizam",
+        b: "Šta je to pozitivizam",
+        c: "Šta je to socijalizam",
+        d: "Šta je to minimalizam",
         odgovor: "d"
+      }
+      ,
+      {
+        pitanje: "Koja dva člana Nadrealista su ujedno bili i frontmeni sarajevskih bendova?",
+        a: "Nele Karajlić i Zenit Đozić",
+        b: "Nele Karajlić i Branko Đurić",
+        c: "Branko Đurić i Zenit Đozić",
+        d: "Dražen Riči i Zenit Đozić",
+        odgovor: "b"
+      },
+      {
+        pitanje: "Stihove 'Najviše kad treba vratit će se Walter' pjeva grupa čiji su članovi...",
+        a: "Brano Jakubović i Vedran Mujagić",
+        b: "Dino Šaran i Dejan Ostojić",
+        c: "Saša Lošić i Asmir Ćeremida",
+        d: "Davor Ebner i Aleksandar Čović",
+        odgovor: "a"
       }
     ]
   },
