@@ -220,3 +220,7 @@ button {
 
 .finished button {
   transform: scale(1.2); }
+
+.finished .trophy {
+  width: 220px;
+  height: auto; }

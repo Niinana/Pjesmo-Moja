@@ -6,7 +6,7 @@ const categories = {
       pitanje: "Ko izvodi pjesmu čiji su stihovi: 'Prije sna ti moram reći: Budi dobra, lijepo sanjaj.'",
       a: "Oliver Dragojević",
       b: "Gibonni",
-      c: "Petar Grašo",
+      c: "Massimo",
       d: "Arsen Dedić",
       odgovor: "a"
     },
@@ -197,7 +197,7 @@ const categories = {
   }
 }
 
-// exYu bendovi haustor, ekv, bijelo dugme
+// exYu bendovi haustor, ekv, bijelo dugme, azra, galija(nemaš kartu ni do)
 // sarajevki_bendovi: dubioza, stuke, helem nejse, pušenje (Zenica Blues), štampa
 
 

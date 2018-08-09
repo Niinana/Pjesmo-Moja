@@ -285,5 +285,9 @@ button{
   button:hover{
     @extend %reverseButton;
   }
+  .trophy{
+    width: 220px;
+    height: auto;
+  }
 }
 
