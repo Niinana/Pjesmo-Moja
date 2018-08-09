@@ -53,7 +53,8 @@ button {
 
 .game .logo {
   margin-top: 80px;
-  width: 180px;
+  width: 160px;
+  height: auto;
   animation-duration: .2s; }
 
 .game .categories-wrapper {
