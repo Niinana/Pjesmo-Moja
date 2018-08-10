@@ -20,7 +20,7 @@ class QuestionHeader extends React.Component{
           <p className="current">{this.props.current}/{this.props.total}</p>
           <p className="score"> Score: {this.props.score} </p>
           <p className="highscore"> highscore: {this.props.highscore} </p>
-          <h2 className="category"></h2>
+          <h2 className="category"> </h2>
           <button className="quit" onClick={this.props.newGame}>Quit</button>
           </div>
     );

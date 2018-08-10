@@ -93,20 +93,37 @@ const categories = {
     questions:[
       {
         pitanje: "Digni ruku nemaš kartu ni do...",
-        a: "",
+        a: "Zenice",
         b: "Prištine",
-        c: "",
-        d: "",
+        c: "Sjenice",
+        d: "Čapljine",
         odgovor: "b"
       },
       {
-        pitanje: "4",
-        a: "ne",
-        b: "ne",
-        c: "ne",
-        d: "da",
+        pitanje: "Koje je godišnje doba u pjesmi Ena? (Haustor)",
+        a: "Proljeće je",
+        b: "Ljeto je",
+        c: "Jesen je",
+        d: "Zima je",
         odgovor: "d"
+      },
+      {
+        pitanje: "Ko je bio frontmen jugoslovenske grupe Ekatarina Velika?",
+        a: "Džoni Štulić",
+        b: "Momčilo Bajagić",
+        c: "Milan Mladenović",
+        d: "Nenad Milosavljević",
+        odgovor: "c"
+      },
+      {
+        pitanje: "Ja sam crn sedef za tvoje uho, ja sam ludak od... (Bijelo Dugme-Lažeš)",
+        a: "...marcipana, dušo",
+        b: "..., dušo",
+        c: "..., dušo",
+        d: "..., dušo",
+        odgovor: "a"
       }
+      //  azra
     ]
   },
   sarajevski_bendovi:{
@@ -175,11 +192,11 @@ const categories = {
         odgovor: "d"
       },
       {
-        pitanje: "Dino Dvornik",
-        a: "ne",
-        b: "ne",
-        c: "ne",
-        d: "da",
+        pitanje: "Populana pjesma Dine Dvornika nosi naziv kojeg kontinenta?",
+        a: "Azija",
+        b: "Amerika",
+        c: "Europa",
+        d: "Afrika",
         odgovor: "d"
       },
       {
@@ -222,8 +239,8 @@ const categories = {
   }
 }
 
-// exYu bendovi haustor, ekv, bijelo dugme, azra, galija(nemaš kartu ni do)
-// sarajevki_bendovi: dubioza, stuke, helem nejse, pušenje (Zenica Blues), štampa
+
+
 
 
 export default categories;

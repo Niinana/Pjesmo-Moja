@@ -24,7 +24,7 @@ newHighscore = false;
   render(){
     return (
       <div className="finished">
-      {(this.newHighscore) ? <img className="trophy" src={require('../images/trophy.png')}/> : <React.Fragment/>}
+      {(this.newHighscore) ? <img className="trophy" src={require('../images/trophy.png')} alt="trophy"/> : <React.Fragment/>}
         <h3> You scored: {this.props.score} </h3>
         <p> {(this.newHighscore) ? `Congratulations, new highscore!` : `Your highscore is ${this.previousHighscore } points. Better luck next time!`}</p>
         <button onClick={() => this.props.newGame()}>New Game</button>

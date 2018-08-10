@@ -17,9 +17,15 @@ $mainFont: 'Radley', serif;
   border: solid 2px #000;
 }
 
-%answered{
+@mixin answered($correct){
   color: #fff !important;
   border:none !important;
+  @if $correct == true{
+    background-color: green !important;
+  }
+  @else {
+    background-color: red !important;
+  }
 }
 
 
@@ -259,13 +265,11 @@ button{
 
 
 .correct{
-  background-color: green !important;
-  @extend %answered;
+  @include answered(true);
 }
 
 .wrong{
-  background-color: red !important ;
-  @extend %answered;
+  @include answered(false);
 }
 
 .finished{

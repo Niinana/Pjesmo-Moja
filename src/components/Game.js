@@ -21,7 +21,7 @@ class Game extends React.Component{
     return (
     <div className="game">
       {(this.state.category === '')?
-        <img className="logo animated zoomIn" src={require('../images/logo.png')}/>
+        <img className="logo animated zoomIn" src={require('../images/logo.png')} alt="logo"/>
         :
         <React.Fragment/>
       }
