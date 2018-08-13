@@ -19,6 +19,10 @@ class CategoryPicker extends React.Component{
   getStyle = (key) => {
     const color = categories[key].color;
     this.delay += 250;
+    if(Object.keys(categories).length%2===1 && key==='random_5'){
+      return{ backgroundColor: color, animationDelay: this.delay,  gridColumn: 'span 2'};
+    }
+    
     return{ backgroundColor: color, animationDelay: this.delay }
   }
 

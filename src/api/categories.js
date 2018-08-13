@@ -118,12 +118,20 @@ const categories = {
       {
         pitanje: "Ja sam crn sedef za tvoje uho, ja sam ludak od... (Bijelo Dugme-Lažeš)",
         a: "...marcipana, dušo",
-        b: "..., dušo",
-        c: "..., dušo",
-        d: "..., dušo",
+        b: "...jorgovana, dušo",
+        c: "...đerdana, dušo",
+        d: "...timijana, dušo",
+        odgovor: "a"
+      },
+      {
+        pitanje: "'To što sam bio to sada crna zemlja pokriva...' je tekst koje pjesme? (Azra)",
+        a: "Usne vrele višnje",
+        b: "Užas je moja furka",
+        c: "Voljela me nije nijedna",
+        d: "Meni se dušo od tebe ne rastaje",
         odgovor: "a"
       }
-      //  azra
+  
     ]
   },
   sarajevski_bendovi:{
@@ -169,67 +177,6 @@ const categories = {
         c: "Saša Lošić i Asmir Ćeremida",
         d: "Davor Ebner i Aleksandar Čović",
         odgovor: "a"
-      }
-    ]
-  },
-  kantautori:{
-    color: '#ff5998',
-    questions:[
-      {
-        pitanje: "djole",
-        a: "da",
-        b: "ne",
-        c: "ne",
-        d: "?",
-        odgovor: "a"
-      },
-      {
-        pitanje: "Džoni Štulić",
-        a: "ne",
-        b: "ne",
-        c: "ne",
-        d: "da",
-        odgovor: "d"
-      },
-      {
-        pitanje: "Populana pjesma Dine Dvornika nosi naziv kojeg kontinenta?",
-        a: "Azija",
-        b: "Amerika",
-        c: "Europa",
-        d: "Afrika",
-        odgovor: "d"
-      },
-      {
-        pitanje: "Kemica",
-        a: "ne",
-        b: "ne",
-        c: "ne",
-        d: "da",
-        odgovor: "d"
-      },
-      {
-        pitanje: "Dino Merlin",
-        a: "ne",
-        b: "ne",
-        c: "ne",
-        d: "da",
-        odgovor: "d"
-      },
-      {
-        pitanje: "Hari MH",
-        a: "ne",
-        b: "ne",
-        c: "ne",
-        d: "da",
-        odgovor: "d"
-      },
-      {
-        pitanje: "Bora Čorba",
-        a: "ne",
-        b: "ne",
-        c: "ne",
-        d: "da",
-        odgovor: "d"
       }
     ]
   },
